@@ -1,0 +1,5 @@
+---
+
+- name: install terminator
+  sudo: yes
+  apt: name=terminator state=present

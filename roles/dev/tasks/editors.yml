@@ -1,0 +1,12 @@
+---
+
+- apt_repository:
+  repo: 'ppa:webupd8team/atom'
+  state: present
+  update-cache: yes
+
+- name: install atom
+  sudo: yes
+  apt: name={{item}} state=present
+  with_items:
+    - atom
